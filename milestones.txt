@@ -1,0 +1,16 @@
+
+
+Suggested Milestones:
+
+1)  Say Hello World
+
+2)  Load the dictionary.
+
+3)  Print the definition of a word hard coded into your program.
+
+...
+
+Then you come up with your own in your group!
+
+
+
