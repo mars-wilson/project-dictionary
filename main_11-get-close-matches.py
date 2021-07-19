@@ -16,7 +16,6 @@ All I had to do was make one function (get close match) and edit the input_word 
 import json
 from difflib import get_close_matches
 
-
 def loadDict(dictPath = 'dictionary.json'):
     """Return a dict of a specified dictionary json file, defaults to dictionary.json
     
@@ -32,6 +31,7 @@ def loadDict(dictPath = 'dictionary.json'):
     """
     dictfile = open(dictPath)
     return json.load(dictfile)
+
 
 def getCleanWord(word, wordlist):
     """Find the word in the wordlist and return it, otherwise return none
@@ -60,9 +60,6 @@ def input_closeMatch(word, wordlist):
     if answer and answer[0] == 'y':
         return bestMatchList[0]
     return None
-
-    
-
 
 
 def input_word(wlist, prompt, reprompt = True, existing=True):
@@ -93,6 +90,7 @@ def input_word(wlist, prompt, reprompt = True, existing=True):
         else:
             done = True
     return goodword
+
 
 def input_definitionNumber(d, word, prompt, allowAdd = False):
     """ Let's input and return the definition number for a word.
@@ -179,6 +177,7 @@ def updateDefinitionOfWord(d, word):
         else:
             d[word][defnum] = newDefinition
     printDefinitions(d, word)
+
 
 def deleteDefinitionOfWord(d, word):
     """ deletes the definitions of a word, and deletes the word from the dictionary if it's the last definition. 
